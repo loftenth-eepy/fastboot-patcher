@@ -46,7 +46,7 @@ fi
 # edit raw image
 message info "editing image..."
 off=$(grep -ab -o SEANDROIDENFORCE raw.img | tail -n 1 | cut -d : -f 1)
-dd if=raw.img of=header.img bs=4k count=$off iflag=count_bytes &&
+dd if=raw.img of=header.img bs=4k iflag=count_bytes &&
 message success "made edit to image!"
 
 # make key/signature
